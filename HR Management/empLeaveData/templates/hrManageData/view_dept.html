@@ -1,0 +1,20 @@
+{% extends "hrManageData\base.html" %}
+{% block content %}
+    <div class = "jumbotron"><h1> Department's List </h1> </div>
+        <table class="container table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th>Department ID</th>
+                    <th>Department Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in dept %}
+                    <tr>
+                        <td>{{ d.dept_id }}</td>
+                        <td>{{ d.dept_name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

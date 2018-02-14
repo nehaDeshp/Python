@@ -1,0 +1,24 @@
+{% extends "hrManageData\base.html" %}
+{% block content %}
+    <div class = "jumbotron"><h1> Employee Details </h1> </div>
+
+        <table class="container table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>View Leave Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% csrf_token %}
+                {% for emp in empData %}
+                    <tr>
+                        <td><a href="{% url 'employee-detail' emp.emp_id %}">{{ emp.emp_id }}</a></td>
+                        <td>{{ emp.emp_name }}</td>
+                        <td><a href="{% url 'emp-leaves' emp.emp_id %}">View Leaves </a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}

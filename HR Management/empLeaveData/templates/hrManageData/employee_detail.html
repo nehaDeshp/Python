@@ -1,0 +1,38 @@
+{% extends "hrManageData\base.html" %}
+{% block content %}
+    <div class = "jumbotron"><h1> Employee Details for Employee No. {{ employee.emp_id  }} </h1> </div>
+    <div class="container">
+        <div class ="row">
+            <div class="col-md-6">
+                Employee Name :
+            </div>
+             <div class="col-md-6">
+                {{ employee.emp_name }}
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+                Employee Department :
+            </div>
+             <div class="col-md-6">
+                {{ employee.dept_id.dept_id }}
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+                Employee Contact :
+            </div>
+             <div class="col-md-6">
+                {{ employee.emp_contact }}
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+                Employee ID :
+            </div>
+             <div class="col-md-6">
+                {{ employee.emp_id }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

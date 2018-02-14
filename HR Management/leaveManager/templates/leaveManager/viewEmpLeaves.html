@@ -1,0 +1,32 @@
+{% extends "hrManageData\base.html" %}
+{% block content %}
+    <div class = "jumbotron"><h1> Leave Records for Employee  {{ leaverecords.emp_id.emp_name }} </h1> </div>
+    <div class="container">
+        <div class ="row">
+
+            <div class="col-md-6">
+                Sick Leaves:
+            </div>
+             <div class="col-md-6">
+
+                {{ leaverecords.sick_balance }}
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+               Vacation Balance :
+            </div>
+             <div class="col-md-6">
+                {{ leaverecords.vacation_balance }}
+            </div>
+        </div>
+        <div class ="row">
+            <div class="col-md-6">
+                Holiday Balance
+            </div>
+             <div class="col-md-6">
+                {{ leaverecords.holiday_balance }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
