@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class = "jumbotron"><h1> Product Details </h1> </div>
+<table class="container table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+            <tr>
+                <td>{{ i.product_name }}</td>
+                <td>{{ i.product_id }}</td>
+                <td>{{ i.product_price }}</td>
+                <td>{{ i.product_quantity }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>
